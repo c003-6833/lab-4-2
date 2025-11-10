@@ -1,0 +1,48 @@
+ Phase 1:
+
+
+
+
+
+ Phase 2:
+ python3 lab4-2_probe.py scanme.nmap.org 22
+scanme.nmap.org:22 is OPEN
+Port 22 is open meaning it is accepting connections
+
+ python3 lab4-2_probe.py scanme.nmap.org 999
+scanme.nmap.org:999 is CLOSED (refused)
+port 999 is closed meaning it is refusing connections
+
+python3 lab4-2_probe.py scanme.nmap.org 110
+scanme.nmap.org:110 is CLOSED (refused)
+port 110 is closed meaning it is refusing connections
+
+python3 lab4-2_probe.py scanme.nmap.org 23
+scanme.nmap.org:23 is CLOSED (refused)
+port 23 is closed meaning it is refusing connections
+
+ python3 lab4-2_probe.py scanme.nmap.org 70
+scanme.nmap.org:70 is CLOSED (refused)
+port 70 is closed meaning it is refusing connections
+
+
+Phase 3:
+-workers 40 --timeout 0.8
+Scan complete in 3.64s — 2 open ports found
+Wrote results to scan_results.json
+
+-workers 80 --timeout 0.5
+Scan complete in 1.85s — 2 open ports found
+Wrote results to scan_results.json
+
+-workers 50 --timeout 0.5
+Scan complete in 2.94s — 2 open ports found
+Wrote results to scan_results.json
+
+-workers 80 --timeout 0.3
+Scan complete in 1.85s — 2 open ports found
+Wrote results to scan_results.json
+
+note: the more workers the faster the scan completes. 
+
+Phase 4:
